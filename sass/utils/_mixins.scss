@@ -1,0 +1,17 @@
+@mixin shadows {
+    box-shadow: 3px 3px 10px lightgrey;
+}
+
+@mixin hover_commande {
+    &:hover{
+        background-color: $color-hover-commande;
+    &:hover .fas{
+        color: $color-primary;
+    }
+    }  
+}
+@mixin hover_cards{
+    &:hover{
+        box-shadow: 0 0 10px $color-tertiary;   
+    }
+}

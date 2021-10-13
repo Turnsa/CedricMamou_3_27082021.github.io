@@ -1,0 +1,31 @@
+.recherche{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    &__localisation{
+        display: flex;
+        justify-content: center;
+        background: $bg-localisation;
+        padding: 12px 0 12px 0;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        margin-left: 10px;
+    }
+    &__heading{
+        text-align: center;
+        padding: 20px 20px 30px 20px;
+        background-color: $bg-search;
+    }
+    &__button{
+        @include button;
+    }
+    & h1{ 
+        padding-bottom: 15px;
+    }
+    & p{
+        padding-bottom: 20px;
+    }
+}

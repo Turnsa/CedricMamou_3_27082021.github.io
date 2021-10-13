@@ -1,0 +1,24 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-color-footer;
+    padding: 25px 20px 30px 20px;
+    & i, a{
+        color: $color-txt-footer;
+    }
+    & .footer__logo{
+        filter: invert(1);
+        height: 20px;
+        margin-bottom: 15px;
+    }
+    & li{
+        line-height: 25px;
+    }
+    & .footer__icone{
+        margin-right: 7px;
+    }
+    & .footer__legend{
+        color: $color-txt-footer;
+        margin-left: 10px;
+    }
+}

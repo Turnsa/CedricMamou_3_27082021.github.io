@@ -1,0 +1,11 @@
+@mixin button{
+    color: $color-btn-search;
+    background: $bg-btn-search;
+    padding: 10px 15px;
+    border: 0px;
+    border-radius: 100px;
+    @include shadows;
+    &:hover{
+        cursor: pointer;
+    }
+}
