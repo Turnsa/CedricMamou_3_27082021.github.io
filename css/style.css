@@ -70,11 +70,24 @@ h3 {
   font-weight: 600;
 }
 
-header {
+.heading h1 {
+  font-family: Shrikhand;
+  font-size: 30px;
+}
+.heading h2 {
+  text-transform: uppercase;
+}
+
+.header {
   display: flex;
   justify-content: center;
-  margin: 0 5% 5% 5%;
-  padding-top: 5%;
+  align-items: center;
+  height: 70px;
+}
+.header a {
+  display: flex;
+  position: absolute;
+  left: 5%;
 }
 
 .recherche {
@@ -93,6 +106,7 @@ header {
   background-color: transparent;
   border: none;
   margin-left: 10px;
+  outline: none;
 }
 .recherche__heading {
   text-align: center;
@@ -100,15 +114,36 @@ header {
   background-color: #f6f6f6;
 }
 .recherche__button {
+  width: 180px;
   color: #fff;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  padding: 10px 15px;
+  padding: 10px 0 10px 0;
   border: 0px;
   border-radius: 100px;
+  position: relative;
+  z-index: 1;
   box-shadow: 3px 3px 10px lightgrey;
 }
 .recherche__button:hover {
   cursor: pointer;
+}
+.recherche__button:hover::after {
+  opacity: 1;
+}
+.recherche__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 100px;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  box-shadow: 3px 3px 10px grey;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
 }
 .recherche h1 {
   padding-bottom: 15px;
@@ -145,7 +180,7 @@ header {
 .commande li a {
   display: flex;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-left: 13px;
   padding: 15px 0 15px 30px;
   background-color: #f6f6f6;
@@ -153,9 +188,12 @@ header {
 }
 .commande li a:hover {
   background-color: #f2eafb;
+  box-shadow: 3px 3px 10px grey;
+  transition-duration: 0.4s;
 }
 .commande li a:hover:hover .fas {
   color: #9356DC;
+  transition-duration: 0.4s;
 }
 .commande li i {
   color: #7e7e7e;
@@ -245,6 +283,127 @@ footer .footer__icone {
 footer .footer__legend {
   color: #fff;
   margin-left: 10px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding-bottom: 20px;
+}
+.heading figure {
+  width: 100%;
+}
+.heading__img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+.heading figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -30px;
+  border-radius: 25px 25px 0 0;
+  background-color: #f6f6f6;
+  padding: 30px 20px 0 20px;
+  font-size: 1.5em;
+}
+.heading h2 {
+  margin-bottom: 20px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.entrees {
+  padding: 10px;
+}
+.entrees__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px lightgrey;
+}
+.entrees__prix {
+  display: flex;
+  align-items: end;
+}
+
+.plats {
+  padding: 10px;
+}
+.plats__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px lightgrey;
+}
+.plats__prix {
+  display: flex;
+  align-items: end;
+}
+
+.desserts {
+  padding: 10px;
+}
+.desserts__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px lightgrey;
+}
+.desserts__prix {
+  display: flex;
+  align-items: end;
+}
+
+.commander {
+  text-align: center;
+  width: 180px;
+  color: #fff;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding: 10px 0 10px 0;
+  border: 0px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 3px 3px 10px lightgrey;
+}
+.commander:hover {
+  cursor: pointer;
+}
+.commander:hover::after {
+  opacity: 1;
+}
+.commander::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 100px;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  box-shadow: 3px 3px 10px grey;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

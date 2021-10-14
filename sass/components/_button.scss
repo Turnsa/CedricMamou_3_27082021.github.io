@@ -1,11 +1,32 @@
 @mixin button{
+    width: 180px;
     color: $color-btn-search;
     background: $bg-btn-search;
-    padding: 10px 15px;
+    padding: 10px 0 10px 0;
     border: 0px;
     border-radius: 100px;
+    position: relative;
+    z-index: 1;
     @include shadows;
     &:hover{
         cursor: pointer;
+    &::after{
+      opacity: 1;
     }
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    border-radius: 100px;
+    background: $color_hover_button;
+    box-shadow: 3px 3px 10px grey;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
 }

@@ -1,17 +1,44 @@
+// shadow
 @mixin shadows {
     box-shadow: 3px 3px 10px lightgrey;
 }
 
+// hover
+@mixin hover_button_search {
+    &:hover{
+        background-color: $color_hover_button;
+    }
+}
 @mixin hover_commande {
     &:hover{
         background-color: $color-hover-commande;
+        box-shadow: 3px 3px 10px grey;
+        transition-duration: 0.4s;
     &:hover .fas{
         color: $color-primary;
+        transition-duration: 0.4s;
     }
     }  
 }
 @mixin hover_cards{
     &:hover{
         box-shadow: 0 0 10px $color-tertiary;   
+    }
+}
+// vignettes
+@mixin cards_menus{
+    padding: 10px;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 15px 0;
+        padding: 10px 20px;
+        background-color: $bg-cards;
+        border-radius: 15px;
+        @include shadows;
+    }
+    &__prix{
+        display: flex;
+        align-items: end;
     }
 }

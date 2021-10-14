@@ -12,3 +12,14 @@ h2{
 h3{
     font-weight: 600;
 }
+
+// pages menu
+.heading{
+    & h1{
+        font-family: Shrikhand;
+        font-size: 30px;
+    }
+    & h2{
+        text-transform: uppercase;
+    }
+}

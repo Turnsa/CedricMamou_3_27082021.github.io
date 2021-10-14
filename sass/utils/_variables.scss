@@ -1,13 +1,19 @@
+// color
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-btn-search: #fff;
 $color-font-new: darken(#99E2D0,40);
-$color-hover-commande: lighten(#9356DC, 35);
 $color-incone-commande: #7e7e7e;
 $color-txt-footer: #fff;
-$bg-btn-search: linear-gradient(to top left, #9356DC, #FF79DA);
+
+// background color
+$bg-btn-search: linear-gradient(to top left, $color-primary, $color-secondary);
 $bg-localisation:linear-gradient(#cecece, 10%, #eaeaea);
 $bg-search: #f6f6f6;
 $bg-cards: #fff;
 $bg-color-footer: #353535;
+
+// hover color
+$color-hover-commande: lighten($color-primary, 35);
+$color_hover_button: linear-gradient(to top left, lighten($color-primary, 5),lighten($color-secondary, 5));
