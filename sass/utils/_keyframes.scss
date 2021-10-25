@@ -1,9 +1,34 @@
+// animation loader
+@keyframes loader{
+  0%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 1;
+    z-index: 2;
+  }
+  100%{
+    opacity: 0;
+    z-index: -999;
+  }
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+// animation carte menu
+  // rotation coche
 @keyframes rotate-check{
     0% {
         transform: rotate( 0deg ) scale( 1 );
       }
-      10% {
-        transform: rotate( 15deg ) scale( 1 );
+      20% {
+        transform: rotate( 30deg ) scale( 1 );
       }
       50% {
         transform: rotate( -180deg ) scale( 1.4 );
@@ -12,15 +37,7 @@
         transform: rotate( -360deg ) scale( 1 );
       }
 }
-@keyframes translate-check{
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-
+  // apparation de la liste
 @keyframes fadein {
     0% {
         opacity:0;

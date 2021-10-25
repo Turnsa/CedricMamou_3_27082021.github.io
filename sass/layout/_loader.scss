@@ -1,0 +1,44 @@
+.loader{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: $bg-loader;
+  height: 100%;
+  width: 100%;
+  animation: loader 3s forwards;
+  z-index: 999;
+}
+.circle{
+  position: relative;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  border: solid 5px transparent;
+  border-top-color: $color-primary;
+  border-radius: 50%;
+  animation: spin 1s linear 3;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;    
+    border-radius: 50%;
+    border: solid 5px transparent;    
+    border-right-color: $color-secondary;
+    animation: spin 4s linear;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    border: solid 5px transparent;    
+    border-left-color: $color-tertiary;
+    animation: spin 10s linear;
+  }
+}
