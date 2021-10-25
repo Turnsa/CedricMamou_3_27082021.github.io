@@ -1,4 +1,4 @@
-
+//  général
 body{
     font-family: roboto, sans-serif, arial;
 }
@@ -12,14 +12,78 @@ h2{
 h3{
     font-weight: 600;
 }
+// page accueil
+.commande{
+    & li{
+        & h2{
+            font-size: 14px;
+            @include desktopL{
+                font-size: 24px;
+            }
+        }
+    }
+    &__icone{
+        @include desktopL{
+            font-size: 20px;
+        }
+        &--mobile{
+            @include desktopL{
+                font-size: 20px;
+            }
+        }
+        &--list{
+            @include desktopL{
+                font-size: 20px;
+            }
+        }
+    }
+}
+.restaurant{
+    &__heading{
+        @include desktopL{
+        font-size: 24px;
+        }
+    }
+}
 
-// pages menu
+// pages menus
 .heading{
     & h1{
         font-family: Shrikhand;
-        font-size: 30px;
+        font-size: 7vw;
+        @include tablet{
+            font-size: 6vw;
+        }
+        @include desktop{
+            font-size: max(50px);
+        }
+        @include desktop{
+            font-size: max(65px);
+        }
     }
     & h2{
         text-transform: uppercase;
+        font-size: 4vw;
+        @include tablet{
+            font-size: 3vw;
+        }
+        @include desktop{
+            font-size: max(30px);
+        }
+        @include desktopL{
+            font-size: max(35px);
+        }
+    }
+    & h3, p, span{
+        font-size: 3.5vw;
+        @include tablet{
+            font-size: 3vw;
+        }
+        @include desktop{
+            font-size: max(20px);
+        }
+        @include desktopL{
+            font-size: max(25px);
+        }
     }
 }

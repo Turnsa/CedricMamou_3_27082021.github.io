@@ -1,11 +1,24 @@
+// liste des restaurants
 .restaurant{
-    padding: 30px 0 30px 0;
+    padding: 30px 0;
     background-color: $bg-search;
+    @include desktopL{
+        padding: 45px 0;
+    }
     &__heading{
         margin-left: 20px;
+        @include desktopL{
+            margin-bottom: 30px;
+        }
     }
     &__list{
         margin-top: 20px;
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
         &__cards{
             position: relative;
             margin: 0 20px 20px 20px;
@@ -13,6 +26,16 @@
             background-color: $bg-cards;
             @include shadows;
             @include hover_cards;
+            @include tablet{
+                width: 48%;
+                margin:0 0 20px 0;
+            }
+            @include desktop{
+                margin-bottom: 35px;
+            }
+            @include desktopL{
+                width: 24%;
+            }
             &__new{
                 text-align: center;
                 position: absolute;
@@ -27,6 +50,9 @@
             }
             &__legend{
                 line-height: 22px;
+                @include desktopL{
+                    font-size: 22px;
+                }
             }
             &__like{
                 display: flex;
@@ -39,11 +65,48 @@
                 height: 170px;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
+                @include tablet{
+                    height: 200px;
+                }
+                @include desktop{
+                    height: 240px;
+                }
+                @include desktopL{
+                    height: 300px;
+                }
             }
              figcaption{
                  display: flex;
                  justify-content: space-between;
+                 align-items: center;
                  padding: 5px 15px 10px 15px;
+                 @include desktopL{
+                     height: 70px;
+                 }
              }
+    }
+}
+
+// hover like
+.heart__empty{
+    position: relative;
+    transition: 0.4s;
+    &:hover{
+        color: transparent;
+    }
+    & .heart__full{
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-sizing: inherit;
+        background: $color-heart;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: 0.4s ;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
     }
 }

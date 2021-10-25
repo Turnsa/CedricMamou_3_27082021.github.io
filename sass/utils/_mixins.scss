@@ -1,3 +1,20 @@
+// responsive
+@mixin tablet {
+    @media screen and (min-width: map-get($break-tablet, tablette)){
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($break-desktop, desktop)){
+        @content;
+    }
+}
+@mixin desktopL {
+    @media screen and (min-width: map-get($break-desktopL, desktopL)){
+        @content;
+    }
+}
+
 // shadow
 @mixin shadows {
     box-shadow: 3px 3px 10px lightgrey;
@@ -22,23 +39,119 @@
 }
 @mixin hover_cards{
     &:hover{
-        box-shadow: 0 0 10px $color-tertiary;   
+        box-shadow: 0 0 10px;
+        transition-duration: 0.4s;  
     }
 }
-// vignettes
+
+// cartes menus
 @mixin cards_menus{
     padding: 10px;
     &__list{
         display: flex;
         justify-content: space-between;
+        position: relative;
+        width: 100%;
         margin: 15px 0 15px 0;
-        padding: 10px 20px;
         background-color: $bg-cards;
         border-radius: 15px;
         @include shadows;
+        @include desktop{
+            width: 32%;
+        }
+        &:hover{
+            & .entrees{
+                &__nom{
+                    width: 70%;
+                }
+                &__prix{
+                transform: translateX(0px);
+                @include tablet{
+                    transform: translateX(-30px);
+                    }
+                }
+            }
+            & .plats{
+                &__nom{
+                    width: 70%;
+                }
+                &__prix{
+                transform: translateX(0px);
+                @include tablet{
+                    transform: translateX(-30px);
+                    }
+                }
+            }
+            & .desserts{
+                &__nom{
+                    width: 70%;
+                }
+                &__prix{
+                transform: translateX(0px);
+                @include tablet{
+                    transform: translateX(-30px);
+                    }
+                }
+            }
+            & .check{
+                transform: scaleX(1);
+            }
+            & .fa-check{
+                animation: rotate-check 1s 0.3s ease-in-out; 
+            }
+        }
+    }
+    &__nom{
+        padding: 10px 20px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        & h3, p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
     &__prix{
+        position: absolute;
+        top: 19px;
+        right: 50px;
+        padding: 10px 20px 10px 0;
+        transform: translateX(50px);
+        transition: 0.4s;
+        @include tablet{
+            top: 30px;
+        }
+    }
+    & .check{
         display: flex;
-        align-items: end;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiary;
+        width: 60px;
+        border-radius: 0 15px 15px 0;
+        overflow: hidden;
+        transition: 0.4s;
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        @include tablet{
+            width: 80px;
+        }
+        > .fa-check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            color: $color-tertiary;
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            @include tablet{}
+                font-size: 17px;
+                width: 30px;
+                height: 30px;
+        }
     }
 }

@@ -1,7 +1,24 @@
+// menu fonctionnement
 .commande{
     margin: 20px;
+    @include desktopL{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
     &__heading{
         margin-bottom: 20px;
+        @include desktopL{
+            font-size: 25px;
+        }
+    }
+    & ul{
+        @include tablet{
+            display: flex;
+            gap: 20px;
+        }
+        @include desktop{
+            justify-content: space-between;
+        }
     }
     &__numero{
         display: flex;
@@ -14,13 +31,14 @@
         height: 25px;
         position: absolute;
     }
-    &--center{
-        color: blue;
-    }
     & li{
         display: flex;
+        flex: 3;
         align-items: center;
         margin-bottom: 20px;
+        @include desktop{
+            max-width: 30%;
+        }
         & a{
             display: flex;
             width: 100%;
@@ -30,20 +48,33 @@
             background-color: $bg-search;
             @include shadows;
             @include hover_commande;
+            @include desktopL{
+                height: 80px;
+                align-items: center;
+            }
         }
         & i{
             color: $color-incone-commande;
         }
         & h2{
             padding-left: 20px;
+            @include tablet{
+                padding-left: 10px;
+            }
         }
     }
     &__icone{
         &--mobile{
            padding-right: 9px;
+           @include tablet{
+               padding-right: 0;
+           }
         }
         &--list{
             padding-right: 3px;
+            @include tablet{
+                padding-right: 0;
+            }
         }
     }
 }

@@ -1,3 +1,8 @@
+// breakpoint tablette
+$break-tablet: (tablette: 768px);
+$break-desktop: (desktop: 992px);
+$break-desktopL: (desktopL: 1330px);
+
 // color
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -6,9 +11,11 @@ $color-btn-search: #fff;
 $color-font-new: darken(#99E2D0,40);
 $color-incone-commande: #7e7e7e;
 $color-txt-footer: #fff;
+$color-heart: linear-gradient(to bottom, $color-primary, $color-secondary);
 
 // background color
 $bg-btn-search: linear-gradient(to top left, $color-primary, $color-secondary);
+$bg-loader: linear-gradient(to top left, $color-tertiary, $color-secondary);
 $bg-localisation:linear-gradient(#cecece, 10%, #eaeaea);
 $bg-search: #f6f6f6;
 $bg-cards: #fff;

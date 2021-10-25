@@ -3,13 +3,33 @@ footer{
     flex-direction: column;
     background-color: $bg-color-footer;
     padding: 25px 20px 30px 20px;
+    @include desktopL{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 170px;
+        font-size: 24px;
+    }
     & i, a{
         color: $color-txt-footer;
+    }
+    @include tablet{
+        .footer__lien{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    @include desktopL{
+        .footer__lien{
+            margin-top: 20px;
+        }
     }
     & .footer__logo{
         filter: invert(1);
         height: 20px;
         margin-bottom: 15px;
+        @include desktopL{
+            height: 34px;
+        }
     }
     & li{
         line-height: 25px;

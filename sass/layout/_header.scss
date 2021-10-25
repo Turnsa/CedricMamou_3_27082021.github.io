@@ -3,9 +3,32 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+    background: #fff;
+    @include tablet{
+        height: 90px;
+    }
+    @include desktop{
+        height: 100px;
+    }
+    @include desktopL{
+        height: 120px;
+    }
     & a{
         display: flex;
         position: absolute;
         left: 5%;
+    }
+    &__logo{
+        @include tablet{
+            height: 6vw;
+        }
+        @include desktopL{
+            max-height: 70px;
+        }
+    }
+    &__back{
+        @include tablet{
+            font-size: 20px;
+        }
     }
 }

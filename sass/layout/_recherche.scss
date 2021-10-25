@@ -1,3 +1,4 @@
+// recherche restaurant
 .recherche{
     display: flex;
     justify-content: center;
@@ -8,25 +9,42 @@
         justify-content: center;
         background: $bg-localisation;
         padding: 12px 0 12px 0;
+        @include desktopL{
+            height: 70px;
+            align-items: center;
+            font-size: 25px;
+        }
     }
     input{
         background-color: transparent;
         border: none;
         margin-left: 10px;
         outline: none;
+        @include desktopL{
+            font-size: 25px;
+        }
     }
     &__heading{
         text-align: center;
         padding: 20px 20px 30px 20px;
         background-color: $bg-search;
+        // @include desktopL{
+        //     height: 300px;
+        // }
     }
     &__button{
         @include button;
     }
     & h1{ 
         padding-bottom: 15px;
+        @include desktopL{
+            font-size: 30px;
+        }
     }
     & p{
         padding-bottom: 20px;
+        @include desktopL{
+            font-size: 25px;
+        }
     }
 }
